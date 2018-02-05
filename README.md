@@ -1,2 +1,2 @@
-+# hapi-graphql
-+Example for graphql with hapi
+# hapi-graphql
+Example for graphql with hapi
