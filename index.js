@@ -38,7 +38,12 @@ async function StartServer() {
     console.log(`Error while starting server: ${err.message}`);
   }
   console.log(`Server running at: ${server.info.uri}`);
-  server.events.on('response', res => logger.info(res.payload));
+
+  // log query  and data  from response event
+  server.events.on('response', request => {
+    logger.info(request.payload);
+    logger.info(request.response.source);
+  });
 }
 
 StartServer();
